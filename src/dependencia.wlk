@@ -8,5 +8,5 @@ class Dependencia{
 	method capacidadTotalEnColor(color){return flota.filter{f => f.color(color)}.sum{f => f.capacidad()}}
 	method colorDelRodadoMasRapido(){return flota.max{f => f.velocidadMaxima()}.color()}
 	method capacidadFaltante(){return empleados - flota.sum{f => f.capacidad()}}
-	
+	method esGrande(){return flota.size() > 4 and empleados > 39}
 }
