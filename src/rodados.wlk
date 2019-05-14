@@ -15,7 +15,7 @@ class Kwid{
 }
 
 object trafic  {
-	const property color = "blanco"
+	const property color = "Blanco"
 	var peso = 4000
 	method capacidad(){return interior.capacidad()}
 	method velocidadMaxima(){return motor.velocidadMaxima()}
