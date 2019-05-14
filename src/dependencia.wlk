@@ -1,5 +1,6 @@
 class Dependencia{
 	var flota = []
+	var registro = []
 	var property empleados = 0
 	method agregarAFlota(rodado){flota.add(rodado)}
 	method quitarDeFlota(rodado){flota.add(rodado)}
@@ -9,4 +10,7 @@ class Dependencia{
 	method colorDelRodadoMasRapido(){return flota.max{f => f.velocidadMaxima()}.color()}
 	method capacidadFaltante(){return empleados - flota.sum{f => f.capacidad()}}
 	method esGrande(){return flota.size() > 4 and empleados > 39}
+	
+	method agregarARegristo(pedido){registro.add(pedido)}
+	
 }
