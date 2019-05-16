@@ -18,7 +18,6 @@ class Dependencia{
 	method agregarARegistro(pedido){registro.add(pedido)}
 	method quitarDeRegistro(pedido){registro.remove(pedido)}
 	method totalPasajeros(){return registro.sum{p => p.pasajeros()}}
-	method devolverFlota(){return flota}
 	method autosNoSatisfacenA(pedido){return not flota.all{a => pedido.puedeSatisfacer(a)}}
 	method cualNoPuedeSatisfacer(){return registro.filter{p => self.autosNoSatisfacenA(p)}}
 	method colorIncompatiblePedidos(color) {return registro.all{ p => p.coloresIncompatibles().contains(color)}}
